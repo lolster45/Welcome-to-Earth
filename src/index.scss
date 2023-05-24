@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-bg {
+    position: relative;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+    height: 100vh;
+    background-color: rgb(21, 21, 21);
+    //background-color: blue;
+    color: white;
+    @media (max-width: 840px) {
+        height: auto;
+        padding-bottom: 30px;   
+    }
+
+    header {
+        .main-title {
+            font-weight: bold;
+            color: white;
+            font-size: 2.9rem;
+            @media (max-width: 400px) {
+                font-size: 2rem;
+            }
+        }
+        h4 {
+            text-align: center;
+            color: grey;
+        }
+    }
+
+    main {
+        position: relative;
+        z-index: 7;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        height: 500px;
+        width: 60%;
+        background-color: transparent;
+
+        @media (max-width: 840px) {
+            height: auto;
+            width: 90%;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        .grid-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            height: 500px;
+            width: 35%;
+            background-color: transparent;
+            a {
+                cursor: pointer;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                text-decoration: none;
+                font-size: 0.9rem;
+                padding-left: 20px;
+
+                border-radius: 50px;
+
+                height: 60px;
+                width: 80%;
+                //border: 1px solid white;
+                color: white;
+    
+                background-color: #0000005a;
+                backdrop-filter: blur(8px);
+                >svg {
+                    font-size: 1.6rem;
+                    margin-right: 10px;
+                }
+            }
+            @media (max-width: 840px) {
+                width: 100%;
+                > a {
+                    padding: 0;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .info-block {
+            position: relative;
+            height: 80%;
+            width: 45%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.352);
+            backdrop-filter: blur(8px);
+
+            @media (max-width: 840px) {
+                width: 100%;
+                padding: 20px;              
+            }
+
+            .home-wrap {
+                height: 100%;
+                //background-color: red;
+                
+                .intro {
+                    margin-top: 10px;
+                    line-height: 30px;
+                }
+            }
+
+            .continents {
+                position: relative;
+                height: 100%;
+                >h1 {
+                    margin-bottom: 10px;
+                }
+
+                .single-continent-tab {
+                    cursor: pointer;
+                    padding-top: 5px;
+                    padding-left: 5px;
+                    height: 30px;
+                    margin-bottom: 10px;
+                    background-color: rgba(43, 43, 43, 0.352);
+                }
+
+                .continent-details-wrap {
+                    height: 100%;
+                    overflow-y: scroll;
+
+                    .continent-back-btn {
+                        position: fixed;
+                        right: 30px;
+                        top: 10px;
+                        cursor: pointer;
+                        border: none;
+                        outline: none;
+                        height: 20px;
+                        width: 20px;
+                        color: white;
+                        background-color: rgba(43, 43, 43, 0.352);
+                        &:hover {
+                            background-color: #5050505a
+                        }  
+                    }
+
+                    label {
+
+                        div {
+                            padding: 5px;
+                            margin-bottom: 10px;
+                            background-color: rgba(43, 43, 43, 0.352);
+                        }
+                    }
+                }
+            }
+            
+            .nav-blocks-wrap {
+                position: relative;
+                height: 100%;
+                overflow-y: scroll;
+                //background-color: blue;
+                > h2 {
+                    margin-bottom: 10px;
+                }
+
+                .show-index {
+                    cursor: pointer;
+                    position: absolute;
+                    z-index: 5;
+                    right: 10px;
+                    height: 25px;
+                    width: 25px;
+                    border: none;
+                    outline: none;
+                    font-size: 0.7rem;
+                    color: white;
+                    border-radius: 50%;
+                    backdrop-filter: blur(8px);
+                    background-color: rgba(43, 43, 43, 0.352);
+                }
+
+                .single-country-wrap {
+                    // position: absolute;
+                    // height: 100%;
+                    // width: 100%;
+                    // padding-left: 0px;
+                    // background-color: red;
+
+                    >h1 {
+                        font-size: 2rem;
+                        margin-bottom: 10px;
+                    }
+
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 10px;
+                        >span {
+                            padding: 5px;
+                            background-color: rgba(43, 43, 43, 0.352);
+                        }
+                    }
+
+                    .back-btn {
+                        position: fixed;
+                        right: 30px;
+                        top: 10px;
+                        cursor: pointer;
+                        border: none;
+                        outline: none;
+                        height: 20px;
+                        width: 20px;
+                        color: white;
+                        background-color: rgba(43, 43, 43, 0.352);
+                        &:hover {
+                            background-color: #5050505a
+                        }  
+                    }
+                }
+
+                .single-country-tab {
+                    cursor: pointer;
+                    padding-top: 5px;
+                    padding-left: 5px;
+                    height: 30px;
+                    margin-bottom: 10px;
+                    background-color: rgba(43, 43, 43, 0.352);
+                    &:hover {
+                        background-color: rgba(80, 80, 80, 0.352)
+                    }
+                }
+
+
+                .language-index-wrap {
+                    position: absolute;
+                    height: fit-content;
+                    width: 100%;
+                    background-color: transparent;
+                    >div {
+                        margin-top: 10px;
+                        padding: 5px;
+                        background-color: rgba(43, 43, 43, 0.352);
+                    }
+                }
+
+                > h1 {
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                    font-size: 0.9rem;
+                }
+
+
+                .search-input {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 40px;
+                    width: 100%;
+                    //background-color: red;
+
+                    input {
+                        height: 100%;
+                        width: 80%;
+                        border: none;
+                        outline: none;
+                        padding-left: 5px;
+                        color: white;
+                        background-color: black;
+                        &:focus::placeholder{
+                            color: transparent;
+                        }
+                    }
+                    button {
+                        cursor: pointer;
+                        height: 100%;
+                        width: 20%;
+                        border: none;
+                        outline: none;
+                        color: white;
+                        background-color: rgba(43, 43, 43, 0.352);
+                    }
+                }
+
+                .language-result {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 20px;
+                    height: 45px;
+                    width: 100%;
+                    background-color: rgba(43, 43, 43, 0.352);
+                    >a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    // .blur-bg {
+    //     position: absolute;
+    //     z-index: 5;
+    //     top: 0px;
+    //     right: 0px;
+    //     bottom: 0px;
+    //     left: 0px;
+    //     background-color: rgba(0, 0, 0, 0.776);
+    //     backdrop-filter: blur(8px);
+    // }
+
+
+
+
+
+    .cool-bg {
+        position: fixed;
+        z-index: 6;
+        top: 50%;
+        left: 50%;
+        height: 1px;
+        width: 1px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 38vw 43vh 1px 2px #fff,45vw 15vh 1px 2px #fff,-5vw -43vh 1px 0px #fff,38vw 46vh 0px 1px #fff,-46vw 38vh 0px 1px #fff,18vw 46vh 2px 3px #fff,8vw 12vh 3px 1px #fff,40vw 40vh 0px 0px #fff,17vw -11vh 2px 1px #fff,-10vw -21vh 2px 3px #fff,-17vw -30vh 3px 0px #fff,5vw 21vh 1px 3px #fff,-37vw -6vh 0px 1px #fff,21vw 10vh 0px 3px #fff,-15vw -14vh 1px 1px #fff,2vw -24vh 0px 3px #fff,9vw 19vh 0px 2px #fff,8vw -33vh 1px 0px #fff,-29vw 42vh 2px 1px #fff,-7vw 49vh 1px 2px #fff,-25vw 48vh 3px 1px #fff,-43vw -41vh 3px 3px #fff,-10vw -24vh 3px 2px #fff,8vw 1vh 0px 1px #fff,-1vw -42vh 0px 3px #fff,-2vw -44vh 2px 0px #fff,33vw -33vh 0px 2px #fff,-11vw -3vh 2px 0px #fff,38vw 34vh 2px 1px #fff,5vw -20vh 3px 1px #fff,47vw -49vh 0px 3px #fff,-50vw 11vh 1px 0px #fff,-4vw 6vh 1px 0px #fff,17vw 1vh 3px 3px #fff,7vw 34vh 2px 1px #fff,15vw -18vh 0px 3px #fff,-29vw 34vh 2px 1px #fff,-26vw 18vh 2px 0px #fff,18vw 35vh 1px 2px #fff,-46vw -23vh 3px 1px #fff,20vw -24vh 0px 1px #fff,37vw -30vh 3px 0px #fff,32vw 27vh 0px 1px #fff,35vw -46vh 2px 1px #fff,-7vw -14vh 1px 2px #fff,-29vw 37vh 3px 3px #fff,35vw -20vh 1px 0px #fff,40vw 5vh 1px 2px #fff,34vw 17vh 0px 0px #fff,11vw 32vh 3px 0px #fff,-7vw -34vh 2px 0px #fff,-36vw 11vh 0px 0px #fff,-21vw -29vh 3px 0px #fff,15vw -43vh 2px 0px #fff,-32vw -24vh 1px 1px #fff,-12vw 13vh 3px 1px #fff,-12vw 23vh 0px 0px #fff,36vw -23vh 2px 0px #fff,-28vw -44vh 0px 1px #fff,42vw -15vh 0px 3px #fff,-2vw 7vh 3px 3px #fff,-31vw 29vh 1px 3px #fff,46vw 2vh 2px 3px #fff,34vw 14vh 2px 3px #fff,-31vw -47vh 3px 1px #fff,-8vw -11vh 0px 3px #fff,22vw 27vh 2px 1px #fff,26vw 3vh 3px 2px #fff,8vw 6vh 3px 1px #fff,50vw 50vh 1px 1px #fff,-14vw 23vh 1px 3px #fff,47vw -48vh 2px 0px #fff,-14vw -44vh 2px 0px #fff,-17vw -32vh 1px 3px #fff,-42vw 50vh 0px 2px #fff,-12vw 8vh 0px 1px #fff,-10vw -17vh 1px 2px #fff,-39vw 27vh 0px 1px #fff,-37vw -29vh 2px 2px #fff,-44vw 2vh 1px 1px #fff,11vw -34vh 2px 1px #fff,-27vw 46vh 1px 3px #fff,-9vw 45vh 2px 2px #fff,7vw 24vh 2px 1px #fff,-11vw -15vh 0px 3px #fff,-16vw -15vh 0px 1px #fff,-36vw 2vh 3px 2px #fff,21vw -17vh 3px 0px #fff,37vw 28vh 2px 3px #fff,-16vw -29vh 3px 2px #fff,7vw 43vh 3px 3px #fff,20vw 46vh 0px 0px #fff,7vw 46vh 0px 1px #fff,-47vw -9vh 2px 2px #fff,-27vw 36vh 3px 1px #fff,17vw 25vh 2px 2px #fff,-15vw 21vh 3px 0px #fff,21vw 41vh 1px 2px #fff,3vw 11vh 0px 1px #fff,39vw 39vh 0px 3px #fff;
+        animation: zoom 10s alternate infinite;
+    } 
+    @keyframes zoom {
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1.5);
+        }
+    }
+}
