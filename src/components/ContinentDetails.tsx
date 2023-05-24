@@ -18,6 +18,11 @@ interface Continent {
     setShowContinentDetails: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+
+interface Countries {
+    name: string
+}
+
 const ContinentDetails: React.FC<Continent> = ({continentName, setShowContinentDetails}) => {
 
 
@@ -45,7 +50,7 @@ const ContinentDetails: React.FC<Continent> = ({continentName, setShowContinentD
             <label>
                 Countries:
                 {
-                    data?.continent?.countries?.map(x => {
+                    data?.continent?.countries?.map((x: Countries) => {
                         return (
                             <div>{x?.name}</div>
                         )

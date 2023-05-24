@@ -28,7 +28,7 @@ interface Country {
 
 
 const Countries = () => {
-    const {data, loading} = useQuery(QUERY_ALL_COUNTRIES);
+    const {data} = useQuery(QUERY_ALL_COUNTRIES);
     
 
     const [currCode, setCurrCode] = useState<string>("")

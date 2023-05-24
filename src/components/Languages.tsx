@@ -23,7 +23,7 @@ const Languages = () => {
     const [noResult, setNoResult] = useState(false)
 
   
-    const [getLanguages, { loading, error, data }] = useLazyQuery(QUERY_ALL_LANGUAGES, {
+    const [getLanguages, { data }] = useLazyQuery(QUERY_ALL_LANGUAGES, {
         variables: {code: input}
     });
 
